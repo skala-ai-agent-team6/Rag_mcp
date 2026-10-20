@@ -1,82 +1,5 @@
 [
   {
-    "document_id": "damage-label:damage:Front-windscreen",
-    "source_type": "team_label_definition",
-    "source": "Team-provided model class list",
-    "product_domain": "automotive",
-    "damage_type": "damage",
-    "part": "Front-windscreen",
-    "part_ko": "앞유리",
-    "text": "damage: Front-windscreen — 앞유리 파손. 자동차 부위 분류 라벨이다. 실제 고장 원인이나 로봇청소기의 대응 부위를 확정하지 않는다.",
-    "applicability": "Automotive model label definition, not a confirmed repair case."
-  },
-  {
-    "document_id": "damage-label:damage:Headlight",
-    "source_type": "team_label_definition",
-    "source": "Team-provided model class list",
-    "product_domain": "automotive",
-    "damage_type": "damage",
-    "part": "Headlight",
-    "part_ko": "전조등",
-    "text": "damage: Headlight — 전조등 파손. 자동차 부위 분류 라벨이다. 실제 고장 원인이나 로봇청소기의 대응 부위를 확정하지 않는다.",
-    "applicability": "Automotive model label definition, not a confirmed repair case."
-  },
-  {
-    "document_id": "damage-label:damage:Rear-windscreen",
-    "source_type": "team_label_definition",
-    "source": "Team-provided model class list",
-    "product_domain": "automotive",
-    "damage_type": "damage",
-    "part": "Rear-windscreen",
-    "part_ko": "뒷유리",
-    "text": "damage: Rear-windscreen — 뒷유리 파손. 자동차 부위 분류 라벨이다. 실제 고장 원인이나 로봇청소기의 대응 부위를 확정하지 않는다.",
-    "applicability": "Automotive model label definition, not a confirmed repair case."
-  },
-  {
-    "document_id": "damage-label:damage:Runningboard",
-    "source_type": "team_label_definition",
-    "source": "Team-provided model class list",
-    "product_domain": "automotive",
-    "damage_type": "damage",
-    "part": "Runningboard",
-    "part_ko": "사이드 발판",
-    "text": "damage: Runningboard — 사이드 발판 파손. 자동차 부위 분류 라벨이다. 실제 고장 원인이나 로봇청소기의 대응 부위를 확정하지 않는다.",
-    "applicability": "Automotive model label definition, not a confirmed repair case."
-  },
-  {
-    "document_id": "damage-label:damage:Sidemirror",
-    "source_type": "team_label_definition",
-    "source": "Team-provided model class list",
-    "product_domain": "automotive",
-    "damage_type": "damage",
-    "part": "Sidemirror",
-    "part_ko": "사이드미러",
-    "text": "damage: Sidemirror — 사이드미러 파손. 자동차 부위 분류 라벨이다. 실제 고장 원인이나 로봇청소기의 대응 부위를 확정하지 않는다.",
-    "applicability": "Automotive model label definition, not a confirmed repair case."
-  },
-  {
-    "document_id": "damage-label:damage:Taillight",
-    "source_type": "team_label_definition",
-    "source": "Team-provided model class list",
-    "product_domain": "automotive",
-    "damage_type": "damage",
-    "part": "Taillight",
-    "part_ko": "후미등",
-    "text": "damage: Taillight — 후미등 파손. 자동차 부위 분류 라벨이다. 실제 고장 원인이나 로봇청소기의 대응 부위를 확정하지 않는다.",
-    "applicability": "Automotive model label definition, not a confirmed repair case."
-  },
-  {
-    "document_id": "damage-label:dent:bonnet",
-    "source_type": "team_label_definition",
-    "source": "Team-provided model class list",
-    "product_domain": "automotive",
-    "damage_type": "dent",
-    "part": "bonnet",
-    "part_ko": "보닛",
-    "text": "dent: bonnet — 보닛 찌그러짐. 자동차 부위 분류 라벨이다. 실제 고장 원인이나 로봇청소기의 대응 부위를 확정하지 않는다.",
-    "applicability": "Automotive model label definition, not a confirmed repair case."
-  },
-  {
     "document_id": "damage-label:dent:boot",
     "source_type": "team_label_definition",
     "source": "Team-provided model class list",
@@ -129,17 +52,6 @@
     "part": "quaterpanel",
     "part_ko": "쿼터 패널",
     "text": "dent: quaterpanel — 쿼터 패널 찌그러짐. 자동차 부위 분류 라벨이다. 실제 고장 원인이나 로봇청소기의 대응 부위를 확정하지 않는다.",
-    "applicability": "Automotive model label definition, not a confirmed repair case."
-  },
-  {
-    "document_id": "damage-label:dent:rear-bumper",
-    "source_type": "team_label_definition",
-    "source": "Team-provided model class list",
-    "product_domain": "automotive",
-    "damage_type": "dent",
-    "part": "rear-bumper",
-    "part_ko": "뒷범퍼",
-    "text": "dent: rear-bumper — 뒷범퍼 찌그러짐. 자동차 부위 분류 라벨이다. 실제 고장 원인이나 로봇청소기의 대응 부위를 확정하지 않는다.",
     "applicability": "Automotive model label definition, not a confirmed repair case."
   },
   {

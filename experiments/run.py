@@ -12,7 +12,7 @@ INPUTS = [
     {"name": "no_power_open_circuit", "raw_text": "전원이 안 켜져요", "pcb_labels": ["open_circuit"]},
     {"name": "noise_short", "raw_text": "사용 중 큰 소음이 나고 멈춰요", "pcb_labels": ["short"]},
     {"name": "all_inputs", "raw_text": "본체가 찌그러졌고 전원이 안 켜져요",
-     "pcb_labels": ["missing_hole"], "damage_labels": [{"damage_type": "dent", "part": "bonnet"}]},
+     "pcb_labels": ["missing_hole"], "damage_labels": [{"damage_type": "dent", "part": "front-bumper"}]},
     {"name": "negative_filter", "raw_text": "필터는 막히지 않았고 흡입력이 약해요", "pcb_labels": []},
     {"name": "unknown_label_only", "raw_text": "", "pcb_labels": ["unregistered_class"]},
     {"name": "incompatible_damage_label_only", "raw_text": "",

@@ -40,12 +40,21 @@ def test_search_request_has_no_product_selector():
 def test_combination_preserves_but_does_not_remap_car_part(monkeypatch):
     monkeypatch.setattr("repair_mcp.retrieval.normalize_observations", lambda *args: {"observations": []})
     request = SearchRequest(raw_text="흡입구에 먼지가 많아 보여요", pcb_labels=["open circuit"],
-                            damage_labels=[DamageLabel(damage_type="dent", part="bonnet")])
+                            damage_labels=[DamageLabel(damage_type="dent", part="roof")])
     query, obs, pcb, damage, warnings = prepare_query(request)
     assert "흡입구" in query and "open_circuit" in query
-    assert "bonnet" not in query and "보닛" not in query
-    assert damage["detections"][0]["raw_part"] == "bonnet"
+    assert "roof" not in query and "지붕" not in query
+    assert damage["detections"][0]["raw_part"] == "roof"
     assert warnings
+
+
+def test_removed_exterior_classes_are_preserved_as_unknown():
+    values = [DamageLabel(damage_type="damage", part="Headlight"),
+              DamageLabel(damage_type="dent", part="bonnet"),
+              DamageLabel(damage_type="dent", part="rear-bumper")]
+    result = interpret_damage_labels(values)
+    assert result["detections"] == []
+    assert result["unknown_labels"] == [v.model_dump() for v in values]
 
 
 def test_negative_observation_not_expanded_positive(monkeypatch):

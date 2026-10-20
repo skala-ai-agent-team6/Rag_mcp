@@ -1,11 +1,10 @@
 {
-  "raw_text": "흡입구에 먼지가 많아 보이고 전원이 켜지지 않아요.",
+  "raw_text": "청소기가 작동하다가 간헐적으로 멈춰요. 본체 위쪽이 눌려 있고, 필터에는 막힘이 보이지 않아요.",
   "origin": "technician",
   "technician_confirmed": true,
-  "pcb_labels": ["open_circuit"],
+  "pcb_labels": ["mouse_bite"],
   "damage_labels": [
-    {"damage_type": "damage", "part": "Headlight"},
-    {"damage_type": "dent", "part": "bonnet"}
+    {"damage_type": "dent", "part": "roof"}
   ],
   "model_code": null,
   "top_k": 5,

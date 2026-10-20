@@ -50,7 +50,7 @@ def create_server(service: str, store=None) -> FastMCP:
     elif service == "damage":
         @mcp.tool(annotations=READ_ONLY)
         def interpret_damage(labels: Annotated[list[DamageLabel], Field(max_length=30)]) -> dict:
-            """damage 6종/dent 8종 해석. 자동차 부위를 청소기 부위로 바꾸지 않음."""
+            """현재 지원하는 dent 6종 해석. 제외된 유형·라벨은 미등록으로 보존. 청소기 부위 대응은 대기 중."""
             return interpret_damage_labels(labels)
 
         @mcp.tool(annotations=READ_ONLY)
@@ -67,8 +67,9 @@ def create_server(service: str, store=None) -> FastMCP:
 
         @mcp.tool(annotations=AI_READ_ONLY)
         def retrieve_repair_context(request: SearchRequest) -> dict:
-            """원문 소견+PCB+외형 라벨로 사례와 별도 기술 문서 검색. 내부에서 OpenAI 소견 변환 호출.
-            반환값은 LangGraph 답변 생성용 근거이며 진단/DB 저장/승인은 수행하지 않음.
+            """소견+PCB+외형 라벨로 사례·기술 문서 검색 및 정확한 라벨의 점검 지침 조회.
+            근거별 출처, 종합 요약, 추가 질문, 조건부 점검 제안을 반환. 내부에서 OpenAI 소견 변환 호출.
+            외형 지침은 청소기 대응 대기 상태. 확정 진단/DB 저장/승인은 수행하지 않음.
             """
             from .retrieval import retrieve_context
             return retrieve_context(request, get_store())

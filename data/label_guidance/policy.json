@@ -1,0 +1,73 @@
+{
+  "version": "0.1",
+  "created_on": "2026-10-20",
+  "document_type": "team_authored_inspection_guidance_draft",
+  "scope": {
+    "pcb": [
+      "missing_hole",
+      "mouse_bite",
+      "open_circuit",
+      "short",
+      "spur",
+      "spurious_copper"
+    ],
+    "dent": [
+      "boot",
+      "doorouter",
+      "fender",
+      "front-bumper",
+      "quaterpanel",
+      "roof"
+    ]
+  },
+  "excluded_labels": {
+    "damage": [
+      "Front-windscreen",
+      "Headlight",
+      "Rear-windscreen",
+      "Runningboard",
+      "Sidemirror",
+      "Taillight"
+    ],
+    "dent": [
+      "bonnet",
+      "rear-bumper"
+    ]
+  },
+  "provenance": "팀 프로젝트용으로 직접 작성한 조건부 점검·조치 초안. 실제 수리 사례, 제조사 정비 지침, IPC 합격 판정 기준이 아니다.",
+  "severity_policy": {
+    "U": "판단 보류: 라벨만 있거나 사진·치수·기능·회로 정보가 부족한 상태. 경미하다고 간주하지 않는다.",
+    "L1": "경미 후보: 영향 범위가 제한되고 관련 기능·규격 확인에서 문제가 발견되지 않은 상태. 정상·출고 승인과 동의어가 아니다.",
+    "L2": "기능 영향 점검 필요: 치수·간섭·고정·절연·연결 상태가 의심되거나 관련 기능 이상이 관찰된 상태.",
+    "L3": "우선 점검·사용 제한 검토: 단선·단락, 안전 관련 기능 저하, 이탈·간섭 등 중대한 영향이 확인되었거나 강하게 의심되는 상태. 전문가 확인 전 관련 동작을 제한한다."
+  },
+  "rules": [
+    "라벨은 모델의 결함 후보 분류명이다. 제조사가 출력한 오류 코드나 고장 원인 확정값이 아니다.",
+    "모델 confidence는 결함 크기·위험도·심각도 점수가 아니다. confidence를 L1/L2/L3로 변환하지 않는다.",
+    "현재 입력이 라벨뿐이면 severity는 U로 반환한다. 문서의 단계별 조건은 추가 확인을 위한 예시이며 자동 판정 임계값이 아니다.",
+    "사진에서 확인한 사실, 모델 후보, 기사 진술, 측정 결과, 추정 영향을 분리한다. 입력에 없는 치수·증상·시험 결과를 만들지 않는다.",
+    "관측 데이터가 있어도 모델·부품별 허용 규격이 없으면 합격 판정을 보류한다. 임의의 mm, 면적비, 저항값 기준을 만들지 않는다.",
+    "결함 미검출·빈 배열은 정상 판정이 아니다. 서로 다른 결함이 겹치면 각각 보존한다.",
+    "PCB 전기 점검은 전원 분리와 잔류 에너지 처리를 포함한 해당 제품 절차에 따라 자격 있는 담당자가 수행한다. 통전 중 임의 저항 측정이나 시험 단락을 지시하지 않는다.",
+    "저항·도통 측정은 회로의 정상 경로와 병렬 부품 영향을 고려한다. 부저음만으로 short를 확정하거나 단순 무응답만으로 모든 단선을 확정하지 않는다.",
+    "라벨만으로 드릴 가공, 구리 제거, 점퍼 연결, 가열·타격·분해, 부품 교체·발주를 자동 실행하지 않는다.",
+    "수리·교체·발주·확정 정보 저장은 담당자 확인과 승인 후 진행한다. 승인 전에는 제안 상태를 유지한다.",
+    "찌그러짐 문서는 원래 자동차 부위 기준의 참고 초안이다. 청소기 대응표가 없으므로 청소기 작업 지침으로 사용하지 않는다.",
+    "청소기 대응표를 받으면 명칭뿐 아니라 재질, 내부 부품, 간섭·고정·기능 점검 및 조치를 다시 검토한다.",
+    "실제 수리 완료 사례 컬렉션과 구분하고 source_type, review_status, applicability_status를 답변 근거에 표시한다."
+  ],
+  "reference_notes": [
+    {
+      "url": "https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/joe.2019.1183",
+      "supports": "PCB 여섯 표면 결함 클래스와 합성 이미지 데이터라는 배경만 참고. 심각도 및 조치 단계는 논문에서 제공한 기준이 아니다."
+    },
+    {
+      "url": "https://service.tesla.com/docs/BodyRepair/Body_Repair_Procedures/Model_3/HTML/en-us/GUID-B4A61C9E-4CE2-4D9A-B9B3-B6D74EEFE038.html",
+      "supports": "차체 수리 가능 작업은 재질·부품별 제조사 절차에 따라 달라진다는 배경만 참고. 특정 차종의 수리 허용 범위를 다른 제품에 적용하지 않는다."
+    },
+    {
+      "url": "https://service.tesla.com/docs/BodyRepair/Body_Repair_Procedures/Model_3_2024/HTML/en-us/GUID-68C87AAD-73AC-48DA-B4A4-A95499CF5A0A.html",
+      "supports": "범퍼 주변 센서와 수리 위치의 관계를 확인할 필요가 있다는 배경만 참고. 이 초안의 조치나 등급에 제조사 인증을 부여하지 않는다."
+    }
+  ]
+}

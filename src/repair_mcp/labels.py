@@ -3,15 +3,10 @@ from .config import read_json
 from .models import DamageLabel
 
 DAMAGE_PARTS = {
-    "damage": {
-        "Front-windscreen": "앞유리", "Headlight": "전조등",
-        "Rear-windscreen": "뒷유리", "Runningboard": "사이드 발판",
-        "Sidemirror": "사이드미러", "Taillight": "후미등",
-    },
     "dent": {
-        "bonnet": "보닛", "boot": "트렁크", "doorouter": "도어 외판",
+        "boot": "트렁크", "doorouter": "도어 외판",
         "fender": "펜더", "front-bumper": "앞범퍼", "quaterpanel": "쿼터 패널",
-        "rear-bumper": "뒷범퍼", "roof": "지붕",
+        "roof": "지붕",
     },
 }
 
@@ -45,7 +40,7 @@ def interpret_damage_labels(labels: list[DamageLabel]) -> dict:
     """Keep automotive part labels and their damage type; no vacuum-part remapping."""
     known, unknown, seen = [], [], set()
     for item in labels:
-        mapping = DAMAGE_PARTS[item.damage_type]
+        mapping = DAMAGE_PARTS.get(item.damage_type, {})
         lookup = {key(part): part for part in mapping}
         if item.damage_type == "dent":
             lookup[key("quarterpanel")] = "quaterpanel"  # preserve team's original spelling

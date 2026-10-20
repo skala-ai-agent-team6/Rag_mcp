@@ -10,8 +10,8 @@
 |---|---|---|---|
 | observation-mcp | normalize_observation | 한국어 기사 소견, 작성 주체, 기사 확인 여부 | OpenAI가 선택한 표준 소견 후보, 원문, 부정/추정, 미등록 구절 |
 | pcb-mcp | interpret_pcb | PCB 라벨 문자열 배열 | 6종 표준 라벨, 설명, 미등록 라벨 |
-| damage-mcp | interpret_damage | damage_type + part 배열 | 14종 부위/유형, 도메인 불일치 여부 |
-| rag-mcp | retrieve_repair_context | 원문 소견 + PCB 라벨 + 외형 라벨 | 과거 사례, 라벨 정의, PCB 참고 문서, 출처와 점수 |
+| damage-mcp | interpret_damage | damage_type + part 배열 | dent 6종 부위, 도메인 불일치 여부 |
+| rag-mcp | retrieve_repair_context | 원문 소견 + PCB 라벨 + 외형 라벨 | 과거 사례, PCB·외형 점검 지침, 종합 근거·추가 질문, 참고 문서 |
 | rag-mcp | search_reference_documents | 검색어, 문서 컬렉션 | PCB 또는 외형 정의 문서 dense 검색 |
 
 보조 목록 도구: `list_observation_terms`, `list_damage_labels`.
@@ -88,13 +88,12 @@ LangGraph 쪽에서는 이 주소들을 MCP Client에 등록한다. Docker 안�
 ```json
 {
   "request": {
-    "raw_text": "흡입구에 먼지가 많아 보이고 전원이 켜지지 않아요.",
+    "raw_text": "청소기가 작동하다가 간헐적으로 멈춰요. 본체 위쪽이 눌려 있고, 필터에는 막힘이 보이지 않아요.",
     "origin": "technician",
     "technician_confirmed": true,
-    "pcb_labels": ["open_circuit", "hole missing"],
+    "pcb_labels": ["mouse_bite"],
     "damage_labels": [
-      {"damage_type": "damage", "part": "Headlight"},
-      {"damage_type": "dent", "part": "bonnet"}
+      {"damage_type": "dent", "part": "roof"}
     ],
     "top_k": 5,
     "min_score": 0.75
@@ -103,8 +102,9 @@ LangGraph 쪽에서는 이 주소들을 MCP Client에 등록한다. Docker 안�
 ```
 
 - PCB: `missing_hole`, `mouse_bite`, `open_circuit`, `short`, `spur`, `spurious_copper`.
-- damage: `Front-windscreen`, `Headlight`, `Rear-windscreen`, `Runningboard`, `Sidemirror`, `Taillight`.
-- dent: `bonnet`, `boot`, `doorouter`, `fender`, `front-bumper`, `quaterpanel`, `rear-bumper`, `roof`.
+- 위 입력은 실행용 가상 예시다. 기사 소견과 모델 라벨을 각각 가정했으며 `roof`를 청소기 상부로 대응시켰거나 `mouse_bite`가 간헐 정지의 원인으로 확인됐다는 뜻은 아니다.
+- 기존 damage 6종 및 dent의 bonnet·rear-bumper는 현재 지원 범위에서 제외하며 미등록 라벨로 반환한다.
+- dent: `boot`, `doorouter`, `fender`, `front-bumper`, `quaterpanel`, `roof`.
 - `quarterpanel`은 별칭으로 허용하되 팀의 원본 표기 `quaterpanel`로 반환한다.
 - 같은 부위라도 damage/dent 유형은 구분한다. 예: damage/roof는 미등록 값이다.
 - 라벨 목록이 비었다고 정상 판정하지 않는다. 미등록 라벨은 버리지 않고 별도 반환한다.
@@ -113,7 +113,7 @@ LangGraph 쪽에서는 이 주소들을 MCP Client에 등록한다. Docker 안�
 
 ### 자동차 라벨과 청소기 사례의 불일치
 
-위 외형 라벨은 자동차 부위명이다. 청소기 전용 서비스이므로 이 라벨을 받으면 파손 MCP가 `domain_mismatch=true`를 반환한다. RAG는 해당 라벨의 **정의 문서와 원본 결과는 제공**하지만, 보닛을 청소기 덮개로 바꿔 사례 검색어에 넣지 않는다.
+위 외형 라벨은 자동차 부위명이다. 청소기 전용 서비스이므로 이 라벨을 받으면 파손 MCP가 `domain_mismatch=true`를 반환한다. RAG는 해당 라벨의 **정의·점검 지침과 원본 결과는 제공**하지만, 보닛을 청소기 덮개로 바꿔 사례 검색어에 넣지 않는다.
 
 기사가 실제로 “본체가 찌그러졌어요”라고 입력한 소견은 독립적인 관찰로 검색에 사용한다. 자동차 부위 라벨과 이 관찰이 같은 위치라는 뜻은 아니다.
 
@@ -125,6 +125,15 @@ LangGraph 쪽에서는 이 주소들을 MCP Client에 등록한다. Docker 안�
 - `repair_cases`: 출처 ID·URL·원문·기존 수리 상태·검색 점수를 가진 외부 사례.
 - `label_definitions`: 정확한 라벨 ID로 찾은 정의. 유사 사례나 제조사 수리 지침이 아님.
 - `pcb_references`: 별도로 검색된 기술 참고문서. 대상 제품이 다를 수 있음.
+- `pcb_guidance`: 정확한 PCB 라벨로 조회한 팀 점검 지침. 의미·조건별 심각도·확인 순서·조건부 조치·추가 질문 포함.
+- `damage_guidance`: 정확한 dent 라벨로 조회한 지침. 현재 `awaiting_vacuum_mapping`, `usable_for_vacuum_action=false`이며 청소기 조치에 적용하지 않는다.
+- `guidance_policy`: 팀 제안 등급·승인·적용 제한에 대한 공통 정책.
+- `integrated_assessment`: 근거 건수 요약, 라벨별 해석, 사례/문서 ID, 추가 질문, PCB 점검 제안. 결정적 근거 조립이며 별도 LLM 진단 생성이 아니다.
+- `missing_guidance`: 인식됐지만 지침이 없는 라벨. 내용을 추측해서 채우지 않는다.
+
+라벨별 지침은 `data/label_guidance/guidance.jsonl`을 정확한 키로 조회한다. 임베딩 점수로 다른 라벨의 지침을 대체하지 않는다. 유사 사례가 없어도 입력 라벨의 지침은 반환한다. 입력 스키마에 검증된 치수·시험 결과가 없으므로 종합 심각도는 `U`(판단 보류)다. 지침의 L1/L2/L3 조건은 팀 제안이며 제조사 공인 기준이 아니다. 지침만 수정했으면 벡터 재색인은 필요 없다.
+
+이번 버전은 기존 외형 정의를 14개에서 6개로 줄였으므로 이전 벡터 색인은 `repair-mcp index`로 갱신해야 한다. 실행 중인 서버는 중지 후 색인하고 재시작한다.
 - `case_search_status=no_candidates`: 검색 후보 없음. 정상 제품 판정이 아님.
 - `diagnosis_confirmed=false`: 이 단계는 확정 진단을 수행하지 않음.
 
@@ -134,7 +143,7 @@ LangGraph는 출처별 증거를 비교하고 추가 점검 필요성을 설명�
 
 - 사례: `all_cases.jsonl`만 색인. 기존 30건 샘플은 중복 색인하지 않는다.
 - PCB: 기술 참고 3개 + 클래스 정의 6개.
-- 외형: `data/damage_documents/labels.json`의 클래스 정의 14개.
+- 외형: `data/damage_documents/labels.json`의 클래스 정의 6개.
 - 토큰 기준 420개, 중첩 40개로 분할. 여러 청크가 검색되어도 같은 문서 ID는 한 번 반환한다.
 - 문서·모델·리비전·청크 설정으로 컬렉션 이름에 fingerprint를 붙인다.
 - 색인 완료 마커를 확인한다. 누락/불완전/입력 자료 변경 시 재색인 안내 오류를 반환한다.

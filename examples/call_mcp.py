@@ -50,6 +50,18 @@ def format_summary(result: dict) -> str:
     if references:
         lines += ["", "[참고문서 — 다른 제품 자료 포함, 적용 여부 확인 필요]"]
         lines += [f"- {doc.get('title', doc['document_id'])}" for doc in references]
+    assessment = result.get("integrated_assessment")
+    if assessment:
+        lines += ["", "[종합 근거]", assessment["summary"]]
+        for finding in assessment["findings"]:
+            lines.append(f"- {finding['label']}: {finding['meaning']} "
+                         f"| 심각도 판단 보류 | {finding['action_status']}")
+        lines += ["", "[추가 확인]"]
+        lines += [f"- {item['question']} ({item['source_id']})"
+                  for item in assessment["additional_questions"]]
+        for proposal in assessment["inspection_proposals"]:
+            lines += ["", f"[{proposal['label']} 점검 제안 — 담당자 확인·승인 필요]"]
+            lines += [f"- {step}" for step in proposal["inspection_steps"]]
     lines += ["", "[해석 시 주의]"]
     lines += [f"- {warning}" for warning in result["warnings"]]
     lines += ["", "전체 원문·출처·라벨 정의·중간 응답: 같은 명령에 --json 추가"]
