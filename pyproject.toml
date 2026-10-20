@@ -1,0 +1,30 @@
+[project]
+name = "repair-rag-mcp"
+version = "0.1.0"
+description = "Observation, PCB, damage and repair-retrieval MCP services"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "fastmcp>=2.12,<3",
+  "qdrant-client>=1.15,<2",
+  "sentence-transformers>=5,<6",
+  "pydantic>=2.11,<3",
+  "openai>=2,<3",
+  "python-dotenv>=1,<2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2"]
+
+[project.scripts]
+repair-mcp = "repair_mcp.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/repair_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

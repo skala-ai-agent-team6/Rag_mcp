@@ -1,0 +1,13 @@
+{
+  "raw_text": "흡입구에 먼지가 많아 보이고 전원이 켜지지 않아요.",
+  "origin": "technician",
+  "technician_confirmed": true,
+  "pcb_labels": ["open_circuit"],
+  "damage_labels": [
+    {"damage_type": "damage", "part": "Headlight"},
+    {"damage_type": "dent", "part": "bonnet"}
+  ],
+  "model_code": null,
+  "top_k": 5,
+  "min_score": 0.75
+}
