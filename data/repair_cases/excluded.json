@@ -1,0 +1,1818 @@
+[
+  {
+    "source_id": "anstiftung_1232",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_1248",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_1353",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_1433",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_161",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_2582",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_288",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_2893",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_3184",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_3397",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_3408",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_3465",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_3511",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_3526",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_3591",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_3661",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_4363",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_4385",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_441",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_4453",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_447",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_4497",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_4770",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_4800",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_5198",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_5355",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_5540",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_5689",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_5744",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_5763",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_5799",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_5812",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_6144",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_6148",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_6155",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_6176",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_6188",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_6296",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_6316",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_6523",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_6589",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_7032",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_839",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_865",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_931",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "anstiftung_957",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "fixitclinic_163",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "fixitclinic_181",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "fixitclinic_365",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "fixitclinic_679",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "fixitclinic_801",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "fixitclinic_825",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_10192",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_10412",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_11254",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_11296",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_11298",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_11299",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_11990",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_12320",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_12506",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_12587",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_12630",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_12714",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_12716",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_1276",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_13147",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_13171",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_1319",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_13398",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_1363",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_14255",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_14496",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_14594",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_14714",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_1474",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_14801",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_14813",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_15027",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_15039",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_15503",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_15687",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_15851",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_15900",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_15952",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_16068",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_16094",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_1615",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_1617",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_16338",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_16514",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_16640",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_16741",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_17067",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_17257",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_17376",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_1740",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_17556",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_17648",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_17663",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_17765",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_1806",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_18395",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_18890",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_18982",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_19033",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_19047",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_19223",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_19645",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_19800",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_19802",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_19980",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_19996",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_20037",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_2038",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_20500",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_20559",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_2056",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_20601",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_20612",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_20839",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_20954",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_21121",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_21125",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_21193",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_21540",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_2156",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_21667",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_21795",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_21870",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_22029",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_22422",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_22602",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_2264",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_22711",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_22735",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_2280",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_2326",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_23347",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_23403",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_23512",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_23604",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_23692",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_23751",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_23907",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_23991",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_24099",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_24341",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_24346",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_24414",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_24480",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_24507",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_24784",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_25241",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_25662",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_25746",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_2583",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_26033",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_2604",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_26093",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_26312",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_26336",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_26350",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_26411",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_26460",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_26468",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_27080",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_27092",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_27474",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_27475",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_27723",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_27736",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_2778",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_28128",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_28318",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_28415",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_28851",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_28867",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_2899",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_2900",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_29125",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_29404",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_29555",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_29837",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_30144",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_30554",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_30590",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_30733",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_30801",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_30896",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_31052",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_31352",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_31470",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_31847",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_31942",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_31945",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_31964",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_32020",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_32095",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_32155",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_32156",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_32229",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_32787",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_32793",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_32839",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_32869",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_3289",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_32960",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_33143",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_33246",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_33293",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_33340",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_33351",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_33387",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_33450",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_33457",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_33838",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_33938",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_33982",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_34199",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_34237",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_34435",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_34610",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_34611",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_34770",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_34789",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_34794",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_34861",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_3540",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_3542",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_3662",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_3702",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_3930",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_3981",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_414",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_4454",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_4519",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_4588",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_4619",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_4715",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_4963",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_5355",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_5475",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_5654",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_5704",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_5762",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_5792",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_5879",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_6093",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_6271",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_628",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_6323",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_6338",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_6408",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_6450",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_6612",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_666",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_675",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_6854",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_6878",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_7019",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_7096",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_7105",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_7143",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_7144",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_7404",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_7479",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_8067",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_8310",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_8369",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_8427",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_861",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_8637",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_8773",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_8816",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_9277",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_9569",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_9686",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_9693",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcint_9932",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1011",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1029",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1118",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1231",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_134",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1366",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1486",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1582",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1601",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1647",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1656",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1662",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1689",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1814",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1968",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_1973",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2013",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2014",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2139",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2211",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2234",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2241",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2260",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2280",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2295",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2338",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2369",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2443",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2452",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2463",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2491",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2541",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2609",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2800",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2826",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2895",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2919",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2927",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2935",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_2937",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3019",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3074",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3176",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3271",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3282",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3361",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3425",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3441",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3485",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3515",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3727",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3806",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3822",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_3902",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_4054",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_4060",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_4095",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_4182",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_4298",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_4418",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_481",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_633",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_705",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_748",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_943",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_949",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "rcwales_961",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_10310",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_10649",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_10666",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_10695",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_11360",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_11788",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_11972",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_1216",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_12166",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_12321",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_12349",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_12572",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_12654",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_1285",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_12988",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_13045",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_13052",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_13160",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_13162",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_1327",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_13302",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_13374",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_13475",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_13548",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_13870",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_14124",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_14212",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_14315",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_14541",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_14547",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_14662",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_14815",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_14949",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_1498",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_15140",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_15144",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_1524",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_15302",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_15603",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_15850",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_15958",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_15992",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_16181",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_16319",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_16422",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_16447",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_16599",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_16683",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_17161",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_17182",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_17189",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_17441",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_17499",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_17546",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_17552",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_17798",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_17845",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_18345",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_18469",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_18489",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_18536",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_18577",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_18818",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_18863",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_18947",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_18989",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_19246",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_19452",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_19563",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_19633",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_19670",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_2047",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_228",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_2467",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_2665",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_2667",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_3025",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_3248",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_3519",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_3594",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_3911",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_3966",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_4514",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_4636",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_4894",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_5132",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_5392",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_5700",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_5707",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_5708",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_5709",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_5747",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_6035",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_615",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_6226",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_6758",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_7076",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_7102",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_7963",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_8479",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_9048",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_9056",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_9195",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_9421",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_9423",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_9579",
+    "reason": "source_labeled_poor_data"
+  },
+  {
+    "source_id": "restart_988",
+    "reason": "source_labeled_poor_data"
+  }
+]

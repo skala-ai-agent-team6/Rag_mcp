@@ -1,0 +1,11 @@
+{
+  "example_only": true,
+  "model_code": null,
+  "observation": {
+    "text": "흡입구에 먼지가 많아보입니다.",
+    "origin": "technician",
+    "technician_confirmed": true
+  },
+  "pcb_labels": [],
+  "pcb_analysis_status": "not_provided"
+}

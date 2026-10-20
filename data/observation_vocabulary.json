@@ -1,0 +1,912 @@
+{
+  "version": "0.1.0",
+  "status": "draft_for_team_review",
+  "corpus_records": 2711,
+  "terms": [
+    {
+      "code": "POWER_NO_START",
+      "label_ko": "전원 켜짐 불가",
+      "group": "전원·충전",
+      "kind": "symptom",
+      "example_input_ko": "전원을 눌러도 아무 반응이 없어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_10275",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Totally dead. Re-soldered broken wire to mains on-off switch. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "POWER_INTERMITTENT",
+      "label_ko": "작동 중 간헐적 꺼짐",
+      "group": "전원·충전",
+      "kind": "symptom",
+      "example_input_ko": "쓰다가 가끔 꺼져요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_25599",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Cuts out. Cleaned contacts on battery. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        },
+        {
+          "source_id": "restart_7674",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Power was cutting out when cord flexed at input.We opened the vacuum casing by removing all screws behind the bagless bucket cylinder, then un-clamped and un-crimped the power cable from the internal circuits, cut off about 6 inches of cable and fed it in further, stripped the cable down to wire ends, re-crimped it back to connect to the circuit, clamped the cable back down, and re-assembled the vacuum.We also un-clogged the hose where some muck was held back by a chip of wood.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: The Restart Project"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "STOP_AFTER_START",
+      "label_ko": "시작 직후 정지",
+      "group": "전원·충전",
+      "kind": "symptom",
+      "example_input_ko": "조금 움직이다가 바로 멈춰요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "anstiftung_6772",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Er lief immer kurz an und blieb dann stehen. Wir schauten uns das genauer Gerät an und sahen, dass es innen sehr verstaubt war. Auch die Sensoren, die dem Roboter mitteilen, dass er sich auf ein Hindernis zubewegt, war sehr schmutzig. Dadurch übermittelten sie falsche Angaben und der Roboter blieb immer gleich wieder stehen, weil er ein Hindernis „sah“. Wir reinigten das Gerät und die Sensoren , danach funktionierte er wieder.Auslöser war hier fehlende Wartung durch die Besitzerin.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        },
+        {
+          "source_id": "rcint_31607",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Motor start en stopt na een tijdje. Batterijen zijn goed. Klepje in de zuigmond van het toestel ( dus niet in de hulpstukken ) zat vast ( stof / vuil / ... ). Klepje losgeduwd. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "CHARGING_FAILURE",
+      "label_ko": "충전 불가",
+      "group": "전원·충전",
+      "kind": "symptom",
+      "example_input_ko": "충전기에 꽂아도 충전이 안 돼요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "anstiftung_2593",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Er ließ sich nicht mehr aufladen. Wir haben die Akkus überprüft. Mehrere Zellen waren defekt und ließen sich nicht mehr aufladen. Leider ist die Empfehlung des Herstellers in diesem Fall, das Gerät fachgerecht zu entsorgen, was völlig unnötig ist! Wenn der Besitzer mit den nachgekauften Akkuzellen wiederkommt, können wir das Akkupack austauschen und das Gerät reparieren.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "CHARGING_INTERMITTENT",
+      "label_ko": "충전 접속 불안정",
+      "group": "전원·충전",
+      "kind": "symptom",
+      "example_input_ko": "충전 단자 연결이 됐다 안 됐다 해요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_18011",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Intermittent charging point. Broken terminal on 12V socket. Resoldered the terminals. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "BATTERY_FAST_DRAIN",
+      "label_ko": "배터리 빠른 방전",
+      "group": "전원·충전",
+      "kind": "symptom",
+      "example_input_ko": "배터리가 너무 빨리 닳아요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_14280",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Accu is heel snel leeg. Accu lijkt defect. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "BATTERY_NORMAL",
+      "label_ko": "배터리 정상 보고",
+      "group": "전원·충전",
+      "kind": "inspection_finding",
+      "example_input_ko": "점검해 보니 배터리는 정상이에요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_31607",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Motor start en stopt na een tijdje. Batterijen zijn goed. Klepje in de zuigmond van het toestel ( dus niet in de hulpstukken ) zat vast ( stof / vuil / ... ). Klepje losgeduwd. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        },
+        {
+          "source_id": "anstiftung_1772",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Die eingebauten Akkus wurden nicht mehr geladen.  Test der NiMH-Akkuzellen - ok. Ladeelektronik - ok.  Das Steckernetzteil lieferte im Leerlauf zwar ausreichend Spannung, brach aber mit angestecktem Staubsauger als Last schnell zusammen. Mit einem neuen Netzteil passender Ausgangsspannung und Ausgangsleistung will der Besitzer die Ladeschale nun entsprechend umbauen. Danach sollte er den Sauger wieder wie gewohnt aufladen und nutzen können.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "SUCTION_WEAK",
+      "label_ko": "흡입력 저하",
+      "group": "흡입·공기 흐름",
+      "kind": "symptom",
+      "example_input_ko": "예전보다 잘 못 빨아들이는 것 같아요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "anstiftung_2987",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Störende Betriebsgeräusche und nachlassende Saugleistung waren der Grund, weswegen ein Saugroboter zu uns gebracht wurde. Nach der Zerlegung befreiten wir ihn von größeren Staubflusen und reinigten ihn gründlich. Hinterher surrte er auf gewohnt leise Weise und saugte einige Runden über den Fußboden im Vereinshaus.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        },
+        {
+          "source_id": "rcint_25666",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "geen zuigkracht. filter zeer vuil. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "SUCTION_ABSENT",
+      "label_ko": "흡입 불가",
+      "group": "흡입·공기 흐름",
+      "kind": "symptom",
+      "example_input_ko": "먼지를 전혀 빨아들이지 못해요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "restart_11255",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Not sucking",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: The Restart Project"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "AIR_PATH_BLOCKED",
+      "label_ko": "흡입 통로 막힘",
+      "group": "흡입·공기 흐름",
+      "kind": "observation",
+      "example_input_ko": "흡입 통로에 뭔가 끼어 막혔어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "anstiftung_2903",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Keine Saugleistung -  nach genauerer Begutachtung stellten wir fest, dass hier offenbar schon jemand dran gewesen war und ein Taschentuch vor den Filter ins Saugrohr geklemmt hatte. Kein Wunder also, dass die Saugleistung zu gering war. Ohne die Verstopfung lief er wieder tadellos.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        },
+        {
+          "source_id": "rcint_32729",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Doesn't suck and makes strangled noise instead. Massive clog in main air way. Advise them to go ahead and follow the on-line directions on clearing a clog.  Previously, she was hesitant because it involved taking the device apart.  I told her she had nothing to lose and go for it. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "INLET_DUST_EXCESS",
+      "label_ko": "흡입구 먼지 과다",
+      "group": "먼지·필터",
+      "kind": "observation",
+      "example_input_ko": "흡입구에 먼지가 많은 것 같아요",
+      "provenance": "team_requested_extension",
+      "example_is_paraphrase": true,
+      "supporting_records": [],
+      "frequency": null
+    },
+    {
+      "code": "INTERNAL_DUST_ACCUMULATION",
+      "label_ko": "내부 먼지 축적",
+      "group": "먼지·필터",
+      "kind": "observation",
+      "example_input_ko": "안에 먼지 뭉치가 많이 보여요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "anstiftung_2987",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Störende Betriebsgeräusche und nachlassende Saugleistung waren der Grund, weswegen ein Saugroboter zu uns gebracht wurde. Nach der Zerlegung befreiten wir ihn von größeren Staubflusen und reinigten ihn gründlich. Hinterher surrte er auf gewohnt leise Weise und saugte einige Runden über den Fußboden im Vereinshaus.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "FILTER_DIRTY",
+      "label_ko": "필터 오염",
+      "group": "먼지·필터",
+      "kind": "observation",
+      "example_input_ko": "필터가 먼지로 많이 더러워요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_25666",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "geen zuigkracht. filter zeer vuil. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "FILTER_BLOCKED",
+      "label_ko": "필터 막힘",
+      "group": "먼지·필터",
+      "kind": "observation",
+      "example_input_ko": "필터가 막혀 있어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_12432",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Luchtfilter verstopt. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        },
+        {
+          "source_id": "restart_11613",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Filter verstopt - Filter blocked",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: The Restart Project"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "ABNORMAL_NOISE",
+      "label_ko": "이상 소음",
+      "group": "소리·열·냄새",
+      "kind": "symptom",
+      "example_input_ko": "평소와 다르게 큰 소리가 나요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_1080",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Vervuiling. Maakt veel lawaai. Luchtwegen schoongemaakt, vooral bij ingang naar motor. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        },
+        {
+          "source_id": "anstiftung_2987",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Störende Betriebsgeräusche und nachlassende Saugleistung waren der Grund, weswegen ein Saugroboter zu uns gebracht wurde. Nach der Zerlegung befreiten wir ihn von größeren Staubflusen und reinigten ihn gründlich. Hinterher surrte er auf gewohnt leise Weise und saugte einige Runden über den Fußboden im Vereinshaus.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "OVERHEATING",
+      "label_ko": "과열",
+      "group": "소리·열·냄새",
+      "kind": "symptom",
+      "example_input_ko": "사용하면 너무 뜨거워져요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "restart_16305",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Overheating",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: The Restart Project"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "BURNING_SMELL",
+      "label_ko": "타는 냄새",
+      "group": "소리·열·냄새",
+      "kind": "symptom",
+      "example_input_ko": "타는 냄새가 나요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_12772",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "brandlucht. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "SPARKS_VISIBLE",
+      "label_ko": "불꽃 발생",
+      "group": "소리·열·냄새",
+      "kind": "observation",
+      "example_input_ko": "전원 버튼 쪽에서 불꽃이 보여요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_13350",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Vonkt bij aan/uit knop. Versleten koolborstels waardoor anker beschadigd. Nieuwe motor besteld en geplaatst. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "BRUSH_NOT_ROTATING",
+      "label_ko": "브러시 회전 불가",
+      "group": "브러시·바퀴",
+      "kind": "symptom",
+      "example_input_ko": "밑에 있는 청소 브러시가 안 돌아요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "restart_10620",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "The main inlet was not working, with the brush bar not spinning. Unaware of the solution - other restarter solved it.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: The Restart Project"
+        },
+        {
+          "source_id": "fixitclinic_742",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Vacuum ~ Brush didn't rotate. I was shown how to disassemble, so I can replace the needed part when I get it. . ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Fixit Clinic"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "BRUSH_HAIR_ACCUMULATION",
+      "label_ko": "브러시 축 털 축적",
+      "group": "브러시·바퀴",
+      "kind": "observation",
+      "example_input_ko": "브러시 축 끝에 머리카락이 잔뜩 쌓였어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_32214",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "\"wasn't sucking\" ~ turned out to be that the sweeper shaft wasn't turning - suction didn't seem to be a problem. the belt that drove the sweeper shaft had slipped off of the motor shaft. Disassembled, attempted to diagnose lack of suction. Realized suction wasn't an issue and continued to reassemble, and return the drive belt back onto the motor shaft. Also cleaned out a large buildup of hair in the end portion of the sweeper shaft. Worked once reassembled!. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "DRIVE_BELT_DETACHED",
+      "label_ko": "구동 벨트 이탈",
+      "group": "브러시·바퀴",
+      "kind": "inspection_finding",
+      "example_input_ko": "벨트가 모터 축에서 빠져 있어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_32214",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "\"wasn't sucking\" ~ turned out to be that the sweeper shaft wasn't turning - suction didn't seem to be a problem. the belt that drove the sweeper shaft had slipped off of the motor shaft. Disassembled, attempted to diagnose lack of suction. Realized suction wasn't an issue and continued to reassemble, and return the drive belt back onto the motor shaft. Also cleaned out a large buildup of hair in the end portion of the sweeper shaft. Worked once reassembled!. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "WHEEL_STUCK",
+      "label_ko": "바퀴 고착",
+      "group": "브러시·바퀴",
+      "kind": "symptom",
+      "example_input_ko": "바퀴가 걸려서 안 움직여요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_15674",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Wieltje zit vast. Brute kracht. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "WHEEL_DETACHED",
+      "label_ko": "바퀴 이탈",
+      "group": "브러시·바퀴",
+      "kind": "observation",
+      "example_input_ko": "바퀴가 빠졌어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_25297",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "wiel eraf. Wiel weer gemonteerd. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        },
+        {
+          "source_id": "restart_19058",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Roue détachée",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: The Restart Project"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "SENSOR_DIRTY",
+      "label_ko": "센서 오염",
+      "group": "센서·오류 표시",
+      "kind": "observation",
+      "example_input_ko": "센서 표면이 더러워 보여요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "anstiftung_6772",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Er lief immer kurz an und blieb dann stehen. Wir schauten uns das genauer Gerät an und sahen, dass es innen sehr verstaubt war. Auch die Sensoren, die dem Roboter mitteilen, dass er sich auf ein Hindernis zubewegt, war sehr schmutzig. Dadurch übermittelten sie falsche Angaben und der Roboter blieb immer gleich wieder stehen, weil er ein Hindernis „sah“. Wir reinigten das Gerät und die Sensoren , danach funktionierte er wieder.Auslöser war hier fehlende Wartung durch die Besitzerin.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        },
+        {
+          "source_id": "rcint_21434",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "F2 storing. 1 van de 3 sensoren was een beetje vuil. Sensoren schoongemaakt met een borsteltje. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "FALSE_OBSTACLE_DETECTION",
+      "label_ko": "장애물 오인식",
+      "group": "센서·오류 표시",
+      "kind": "symptom",
+      "example_input_ko": "앞에 아무것도 없는데 장애물이 있다고 해요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "anstiftung_6772",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Er lief immer kurz an und blieb dann stehen. Wir schauten uns das genauer Gerät an und sahen, dass es innen sehr verstaubt war. Auch die Sensoren, die dem Roboter mitteilen, dass er sich auf ein Hindernis zubewegt, war sehr schmutzig. Dadurch übermittelten sie falsche Angaben und der Roboter blieb immer gleich wieder stehen, weil er ein Hindernis „sah“. Wir reinigten das Gerät und die Sensoren , danach funktionierte er wieder.Auslöser war hier fehlende Wartung durch die Besitzerin.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "ERROR_DISPLAYED",
+      "label_ko": "오류 표시",
+      "group": "센서·오류 표시",
+      "kind": "symptom",
+      "example_input_ko": "F2 오류가 떠요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_21434",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "F2 storing. 1 van de 3 sensoren was een beetje vuil. Sensoren schoongemaakt met een borsteltje. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        },
+        {
+          "source_id": "rcint_27354",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "foutmelding linker wiel, daarna stopt hij. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "SWITCH_UNRESPONSIVE",
+      "label_ko": "스위치 동작 불가",
+      "group": "스위치·배선·기판",
+      "kind": "symptom",
+      "example_input_ko": "시작 버튼을 눌러도 작동하지 않아요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_22998",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "stop-start knop doet het niet. koolborstels vervuild. koolborstels schoongemaakt met contactspray. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "WIRE_BROKEN",
+      "label_ko": "배선 단선",
+      "group": "스위치·배선·기판",
+      "kind": "inspection_finding",
+      "example_input_ko": "전선이 끊어져 있어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_10275",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Totally dead. Re-soldered broken wire to mains on-off switch. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        },
+        {
+          "source_id": "anstiftung_2774",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Keinerlei Funktion - schon die Zerlegung stellte sich wegen einiger unter Plastikkappen versteckter Gehäuseschrauben als echte Herausforderung heraus und dauerte entsprechend länger. Nachdem wir uns aber bis zum Elektromotor und der Steuerelektronik vorgearbeitet hatten, war der Rest dann fast schon Routine: Durchgangsprüfung von Kabel und Netzzuleitung sowie Widerstandsmessungen am Motor, wobei Letztere auf einen Defekt hindeuteten. Bei genauerer Suche entdeckten wir einen Drahtriss an der Kontaktstelle zur Statorspule, der durch Anlöten zu beheben war. Hinterher lief er dann wieder wie eh und je.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "CONNECTOR_LOOSE",
+      "label_ko": "커넥터 연결 이탈",
+      "group": "스위치·배선·기판",
+      "kind": "inspection_finding",
+      "example_input_ko": "내부 케이블 연결이 빠져 있어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "anstiftung_5511",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Er funktionierte gar nicht mehr. Vor einiger Zeit versagte schon der Aufrollmechanismus und nun hatte das Kabel vor den Rausziehversuchen des Besitzers endgültig kapituliert, man konnte die Anschlussdrähte aus dem Gerät schauen sehen. Wir zerlegten den Staubsauger. Zum Glück war das Kabel nicht vom Wickler abgerissen, sondern eine Steckverbindung hatte sich gelöst. Wir machten den Wickler mit Silikonspray wieder leichtgängig, steckten das Kabel an und fixierten es gut. Der Staubsauger funktioniert wieder gut und zieht auch zuverlässig sein Kabel ein.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "SOLDER_JOINT_LOOSE",
+      "label_ko": "납땜 접합 불량",
+      "group": "스위치·배선·기판",
+      "kind": "inspection_finding",
+      "example_input_ko": "기판 납땜 연결이 떨어져 있어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_19834",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Schakelaar kapot. Soldering op print los. Opnieuw gesoldeerd. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        },
+        {
+          "source_id": "rcint_25741",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Doet het niet meer. De thyristor/triac van de toerenregeling op de print bij de motor maakt geen contact meer. De thyristor/triac opnieuw gesoldeerd. Ik denk dat dit de derde Miele stofzuiger is die dit zelfde probleem had. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "PCB_COMPONENT_FAULT_REPORTED",
+      "label_ko": "기판 부품 이상 보고",
+      "group": "스위치·배선·기판",
+      "kind": "inspection_finding",
+      "example_input_ko": "점검 결과 속도 제어 기판의 부품에 이상이 있어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_19745",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "werkt niet. Kapot onderdeel op printplaat voor toerenregelaar. printplaat besteld en vervangen. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "MOTOR_NOT_ROTATING",
+      "label_ko": "모터 회전 불가",
+      "group": "모터",
+      "kind": "symptom",
+      "example_input_ko": "모터가 돌지 않아요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "anstiftung_4182",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "der Motor drehte nicht mehr. Wir stellten fest, dass trotz des hohen Alters, die Motorkohlen noch nicht verschlissen waren. Eine der Motorkohlen hatte sich allerdings in ihrer Führung verhakt. Woraufhin diese keinen richtigen Kontakt mehr gab. Wir setzten die Führung wieder instand und der Motor funktionierte wieder.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "MOTOR_BRUSH_CONTACT_POOR",
+      "label_ko": "모터 카본 브러시 접촉 불량",
+      "group": "모터",
+      "kind": "inspection_finding",
+      "example_input_ko": "점검해 보니 카본 브러시 접촉이 좋지 않아요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_23473",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Hij gaat niet aan. Koolborstels maken slecht contact. Koolborstels gereinigd met contactspray. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "LIQUID_INGRESS",
+      "label_ko": "물 유입",
+      "group": "수분·부식",
+      "kind": "observation",
+      "example_input_ko": "청소기가 물을 빨아들였어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "anstiftung_6768",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Gerät hatte eine große Menge Wasser eingezogen und ging nicht mehr. Motor zerlegt. Kohlebürsten steckten in den korrodierten Führungen fest und waren weggebrannt.- Kommutator gereinigt- Führungen gangbar gemacht- Kohlen wieder eingeschliffen",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "CORROSION_VISIBLE",
+      "label_ko": "부식 흔적",
+      "group": "수분·부식",
+      "kind": "observation",
+      "example_input_ko": "모터 쪽에 녹이 보여요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_21043",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "werkt niet. roest in de motor. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "HOUSING_BROKEN",
+      "label_ko": "덮개·외장 파손",
+      "group": "외형·부속품",
+      "kind": "observation",
+      "example_input_ko": "덮개가 깨져 있어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "anstiftung_4980",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Abdeckklappe gebrochen",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: anstiftung"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "HOUSING_DENT",
+      "label_ko": "외장 찌그러짐",
+      "group": "외형·부속품",
+      "kind": "observation",
+      "example_input_ko": "본체 한쪽이 찌그러져 있어요",
+      "provenance": "team_requested_extension",
+      "example_is_paraphrase": true,
+      "supporting_records": [],
+      "frequency": null
+    },
+    {
+      "code": "HOSE_BROKEN",
+      "label_ko": "호스 파손",
+      "group": "외형·부속품",
+      "kind": "observation",
+      "example_input_ko": "호스 연결 부위가 찢어졌어요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_20795",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Slang is afgescheurd bij het stevigere gedeelte van de slang. Het stukje van de slang dat in het stevige deel is blijven zitten verwijderd. Slang weer in het stevige deel verlijmd. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        },
+        {
+          "source_id": "restart_18657",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Hose broken at one end.Hose softened in hot water and broken bit removed.  Cut off damaged end, refitted and glued.",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: The Restart Project"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "CORD_REWIND_FAILURE",
+      "label_ko": "전원선 되감기 불가",
+      "group": "외형·부속품",
+      "kind": "symptom",
+      "example_input_ko": "전원선이 다시 들어가지 않아요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "restart_8496",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Cable not retracting",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: The Restart Project"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "DUSTBIN_OPEN_FAILURE",
+      "label_ko": "먼지통 열림 불가",
+      "group": "외형·부속품",
+      "kind": "symptom",
+      "example_input_ko": "먼지통이 안 열려요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_22042",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Stofbak opent niet. Knop gaat te zwaar. Papiertje ertussen. Advies garantie halen. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "SEAL_LEAKAGE_REPORTED",
+      "label_ko": "밀폐 불량 보고",
+      "group": "외형·부속품",
+      "kind": "inspection_finding",
+      "example_input_ko": "점검 결과 밀폐가 잘 안 되는 것 같아요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_23225",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Rejette de la poussière dans la pièce lors de l'aspiration. Clapet -double inopérant et mauvais étanchéité. Le filtre à air doit ètre changé. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    },
+    {
+      "code": "DUST_LEAKAGE",
+      "label_ko": "먼지 외부 배출",
+      "group": "외형·부속품",
+      "kind": "symptom",
+      "example_input_ko": "청소할 때 먼지가 방 안으로 다시 나와요",
+      "provenance": "source_record_supported",
+      "example_is_paraphrase": true,
+      "supporting_records": [
+        {
+          "source_id": "rcint_23225",
+          "source_url": "https://github.com/openrepair/data/blob/main/quests/vacuums/dustup.csv",
+          "original_text": "Rejette de la poussière dans la pièce lors de l'aspiration. Clapet -double inopérant et mauvais étanchéité. Le filtre à air doit ètre changé. ",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "Open Repair Alliance / DustUp; provider: Repair Café International"
+        }
+      ],
+      "frequency": null
+    }
+  ],
+  "original_fault_type_counts": {
+    "Cable/cord": 568,
+    "Motor": 393,
+    "Power/battery": 361,
+    "Internal damage": 309,
+    "Blockage": 297,
+    "Button/switch": 240,
+    "Filter": 123,
+    "External damage": 80,
+    "Overheating": 70,
+    "Hose/tube/pipe": 70,
+    "Brush": 41,
+    "Wheels/rollers": 39,
+    "Dustbag/canister": 39,
+    "Other": 37,
+    "Liquid damage": 23,
+    "Accessories/attachments": 13,
+    "Display/LED": 8
+  },
+  "notes": [
+    "Counts are original mutually exclusive source fault types, not observation frequencies.",
+    "Two terms are team-requested extensions; source support is not fabricated.",
+    "No automated normalization or tagging of all source cases has been executed.",
+    "PCB detection classes remain in pcb_label_taxonomy.json; do not infer them from symptoms."
+  ]
+}

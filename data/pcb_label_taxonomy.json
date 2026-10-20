@@ -1,0 +1,14 @@
+{
+  "source": "User-provided complete team PCB model class list",
+  "scope": "visual_defect_labels",
+  "normalization": "Trim whitespace, lowercase, replace spaces/hyphens with underscores, then match explicit aliases. Preserve the original label. Unknown values remain unknown.",
+  "labels": [
+    {"label": "missing_hole", "aliases": ["missing hole", "hole missing", "hole_missing"], "name_ko": "구멍 누락", "description_ko": "뚫려야 할 구멍이 없음"},
+    {"label": "mouse_bite", "aliases": ["mouse bite"], "name_ko": "가장자리 결손", "description_ko": "회로 패턴 가장자리가 쥐가 갉아먹은 듯 파인 모서리 결함"},
+    {"label": "open_circuit", "aliases": ["open circuit"], "name_ko": "회로 끊김", "description_ko": "회로 패턴이 끊어진 형태의 결함(개방회로)"},
+    {"label": "short", "aliases": [], "name_ko": "단락", "description_ko": "붙으면 안 되는 회로 패턴끼리 연결됨"},
+    {"label": "spur", "aliases": [], "name_ko": "돌기", "description_ko": "회로선에서 구리가 튀어나온 형태"},
+    {"label": "spurious_copper", "aliases": ["spurious copper"], "name_ko": "불필요한 구리", "description_ko": "있으면 안 되는 자리에 남은 구리"}
+  ],
+  "interpretation": "Class names describe model detections. They do not identify a failed functional component or prove causation of the current symptom. No confidence score is inferred from a label alone."
+}

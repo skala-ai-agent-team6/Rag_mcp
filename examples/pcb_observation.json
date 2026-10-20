@@ -1,0 +1,23 @@
+{
+  "example_only": true,
+  "status": "manually_transcribed_from_user_screenshot",
+  "case_id": null,
+  "model_code": null,
+  "symptom": null,
+  "error_codes": [],
+  "pcb_analysis": {
+    "model_version": null,
+    "input_image_id": null,
+    "annotated_image_id": null,
+    "source_image_pair_verified": false,
+    "detections": [
+      {
+        "label": "mouse_bite",
+        "confidence": 0.26,
+        "bbox_xyxy": null,
+        "coordinate_space": null
+      }
+    ]
+  },
+  "interpretation": "검출 후보. 실제 전기적 고장·증상의 원인은 미확정. 원본 추론 JSON이 없어 좌표와 이미지 매칭은 미기재."
+}
