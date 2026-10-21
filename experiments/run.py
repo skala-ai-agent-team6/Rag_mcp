@@ -11,12 +11,11 @@ INPUTS = [
     {"name": "dust", "raw_text": "흡입구에 먼지가 많은 것 같아요", "pcb_labels": []},
     {"name": "no_power_open_circuit", "raw_text": "전원이 안 켜져요", "pcb_labels": ["open_circuit"]},
     {"name": "noise_short", "raw_text": "사용 중 큰 소음이 나고 멈춰요", "pcb_labels": ["short"]},
-    {"name": "all_inputs", "raw_text": "본체가 찌그러졌고 전원이 안 켜져요",
-     "pcb_labels": ["missing_hole"], "damage_labels": [{"damage_type": "dent", "part": "front-bumper"}]},
+    {"name": "all_inputs", "raw_text": "외장 표면에 가는 금이 보이고 전원이 안 켜져요",
+     "pcb_labels": ["missing_hole"], "damage_labels": ["crazing"]},
     {"name": "negative_filter", "raw_text": "필터는 막히지 않았고 흡입력이 약해요", "pcb_labels": []},
     {"name": "unknown_label_only", "raw_text": "", "pcb_labels": ["unregistered_class"]},
-    {"name": "incompatible_damage_label_only", "raw_text": "",
-     "damage_labels": [{"damage_type": "damage", "part": "Front-windscreen"}]},
+    {"name": "unknown_surface_label_only", "raw_text": "", "damage_labels": ["roof"]},
 ]
 
 
@@ -61,7 +60,7 @@ async def main():
     rows += ["", "## 해석 시 주의", "",
              "- 라벨 추가로 순위가 달라져도 정확도가 좋아졌다는 뜻은 아닙니다.",
              "- 사례에 PCB 라벨 정답이 없으므로 결함 이름 일치 정확도를 계산하지 않습니다.",
-             "- 자동차 부위 라벨은 청소기 검색어에서 제외되지만 정의와 원본 라벨은 반환됩니다.",
+             "- 표면 결함 라벨은 위치·재질·심각도를 지정하지 않습니다. 이전 부위 라벨은 미등록으로 보존합니다.",
              "- 미등록 라벨만 있으면 사례 검색을 실행하지 않습니다.",
              "- 모델 정보가 없는 외부 사례이며 삼성 특정 모델의 확정 수리 지침이 아닙니다.",
              "- E5 점수의 임계값 0.75는 임시값입니다. 무관한 질문도 통과할 수 있어 정답셋 평가가 필요합니다.",

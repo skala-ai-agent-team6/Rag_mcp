@@ -2,7 +2,6 @@
 import json
 import re
 from .config import DATA, read_json
-from .labels import DAMAGE_PARTS
 
 
 def load_documents() -> dict[str, list[dict]]:
@@ -25,16 +24,3 @@ def load_documents() -> dict[str, list[dict]]:
         })
     damage = read_json("damage_documents/labels.json")
     return {"repair_cases": cases, "pcb_documents": pcb, "damage_documents": damage}
-
-
-def damage_definitions() -> list[dict]:
-    return [{
-        "document_id": f"damage-label:{kind}:{part}",
-        "source_type": "team_label_definition",
-        "source": "Team-provided model class list",
-        "product_domain": "automotive",
-        "damage_type": kind, "part": part, "part_ko": korean,
-        "text": f"{kind}: {part} — {korean} " + ("파손" if kind == "damage" else "찌그러짐") +
-                ". 자동차 부위 분류 라벨이다. 실제 고장 원인이나 로봇청소기의 대응 부위를 확정하지 않는다.",
-        "applicability": "Automotive model label definition, not a confirmed repair case.",
-    } for kind, parts in DAMAGE_PARTS.items() for part, korean in parts.items()]

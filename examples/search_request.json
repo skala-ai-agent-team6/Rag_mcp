@@ -1,11 +1,9 @@
 {
-  "raw_text": "청소기가 작동하다가 간헐적으로 멈춰요. 본체 위쪽이 눌려 있고, 필터에는 막힘이 보이지 않아요.",
+  "raw_text": "청소기가 간헐적으로 멈춰요. 외장 표면에 가는 금이 보이고, 필터에는 막힘이 보이지 않아요.",
   "origin": "technician",
   "technician_confirmed": true,
   "pcb_labels": ["mouse_bite"],
-  "damage_labels": [
-    {"damage_type": "dent", "part": "roof"}
-  ],
+  "damage_labels": ["crazing"],
   "model_code": null,
   "top_k": 5,
   "min_score": 0.75

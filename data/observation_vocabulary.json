@@ -782,6 +782,17 @@
       "frequency": null
     },
     {
+      "code": "HOUSING_CRACK",
+      "label_ko": "외장 잔금·균열",
+      "group": "외형·부속품",
+      "kind": "observation",
+      "example_input_ko": "외장 표면에 가는 금이 보여요",
+      "provenance": "team_requested_extension",
+      "example_is_paraphrase": true,
+      "supporting_records": [],
+      "frequency": null
+    },
+    {
       "code": "HOSE_BROKEN",
       "label_ko": "호스 파손",
       "group": "외형·부속품",
@@ -905,7 +916,7 @@
   },
   "notes": [
     "Counts are original mutually exclusive source fault types, not observation frequencies.",
-    "Two terms are team-requested extensions; source support is not fabricated.",
+    "Three terms are team-requested extensions; source support is not fabricated.",
     "No automated normalization or tagging of all source cases has been executed.",
     "PCB detection classes remain in pcb_label_taxonomy.json; do not infer them from symptoms."
   ]

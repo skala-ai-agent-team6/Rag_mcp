@@ -45,7 +45,8 @@ def test_sdk_request_and_provenance(fake_openai):
     assert requests[0]["input"][1] == {"role": "user", "content": text}
     assert requests[0]["store"] is False
     schema = requests[0]["text"]["format"]["schema"]
-    assert len(schema["$defs"]["ObservationCode"]["enum"]) == 42
+    assert len(schema["$defs"]["ObservationCode"]["enum"]) == 43
+    assert "HOUSING_CRACK" in schema["$defs"]["ObservationCode"]["enum"]
 
 
 def test_negative_and_uncertainty_preserved(fake_openai):

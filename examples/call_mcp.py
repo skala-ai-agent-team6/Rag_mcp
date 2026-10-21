@@ -24,8 +24,7 @@ def format_summary(result: dict) -> str:
     for item in result["pcb"]["detections"]:
         lines.append(f"- PCB: {item['label']} — {item['description_ko']}")
     for item in result["damage"]["detections"]:
-        suffix = "" if item["domain_compatible"] else " / 청소기 부위와 불일치, 검색어 제외"
-        lines.append(f"- 외형: {item['description_ko']}{suffix}")
+        lines.append(f"- 외형: {item['label']} — {item['description_ko']} (위치 미확인)")
     for category in ("pcb", "damage"):
         if result[category]["unknown_labels"]:
             lines.append(f"- {category} 미등록 라벨: {result[category]['unknown_labels']}")
@@ -52,15 +51,11 @@ def format_summary(result: dict) -> str:
         lines += [f"- {doc.get('title', doc['document_id'])}" for doc in references]
     assessment = result.get("integrated_assessment")
     if assessment:
-        lines += ["", "[종합 근거]", assessment["summary"]]
+        lines += ["", "[증상 판정]", assessment["symptom_conclusion"], "", "[점검 안내]", assessment["summary"]]
         for finding in assessment["findings"]:
-            lines.append(f"- {finding['label']}: {finding['meaning']} "
-                         f"| 심각도 판단 보류 | {finding['action_status']}")
-        lines += ["", "[추가 확인]"]
-        lines += [f"- {item['question']} ({item['source_id']})"
-                  for item in assessment["additional_questions"]]
+            lines.append(f"- {finding['label']}: {finding['meaning']}")
         for proposal in assessment["inspection_proposals"]:
-            lines += ["", f"[{proposal['label']} 점검 제안 — 담당자 확인·승인 필요]"]
+            lines += ["", f"[{proposal['label']} 확인 순서]"]
             lines += [f"- {step}" for step in proposal["inspection_steps"]]
     lines += ["", "[해석 시 주의]"]
     lines += [f"- {warning}" for warning in result["warnings"]]

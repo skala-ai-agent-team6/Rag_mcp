@@ -45,6 +45,7 @@ TERMS = [
     ("수분·부식", "CORROSION_VISIBLE", "부식 흔적", "observation", "모터 쪽에 녹이 보여요", ["rcint_21043"]),
     ("외형·부속품", "HOUSING_BROKEN", "덮개·외장 파손", "observation", "덮개가 깨져 있어요", ["anstiftung_4980"]),
     ("외형·부속품", "HOUSING_DENT", "외장 찌그러짐", "observation", "본체 한쪽이 찌그러져 있어요", []),
+    ("외형·부속품", "HOUSING_CRACK", "외장 잔금·균열", "observation", "외장 표면에 가는 금이 보여요", []),
     ("외형·부속품", "HOSE_BROKEN", "호스 파손", "observation", "호스 연결 부위가 찢어졌어요", ["rcint_20795", "restart_18657"]),
     ("외형·부속품", "CORD_REWIND_FAILURE", "전원선 되감기 불가", "symptom", "전원선이 다시 들어가지 않아요", ["restart_8496"]),
     ("외형·부속품", "DUSTBIN_OPEN_FAILURE", "먼지통 열림 불가", "symptom", "먼지통이 안 열려요", ["rcint_22042"]),
@@ -74,13 +75,13 @@ def main():
     result = {"version": "0.1.0", "status": "draft_for_team_review", "corpus_records": len(corpus),
         "terms": entries, "original_fault_type_counts": stats,
         "notes": ["Counts are original mutually exclusive source fault types, not observation frequencies.",
-                  "Two terms are team-requested extensions; source support is not fabricated.",
+                  "Three terms are team-requested extensions; source support is not fabricated.",
                   "No automated normalization or tagging of all source cases has been executed.",
                   "PCB detection classes remain in pcb_label_taxonomy.json; do not infer them from symptoms."]}
     (ROOT / "data/observation_vocabulary.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     lines = ["# 사용자 소견 표준 용어 초안", "", f"대상: DustUp 검색 후보 {len(corpus):,}건. 원문에서 확인한 현상과 팀 요구를 바탕으로 제안한 {len(entries)}개 용어입니다.",
         "", "원본의 고장 분류와 신규 접수 소견은 다릅니다. 아래 표준 용어의 빈도를 전체 데이터에서 집계한 것은 아닙니다. 입력에 실제 표현된 내용만 선택합니다.",
-        "", "흡입구 먼지 과다와 외장 찌그러짐은 팀 시나리오에서 추가한 용어입니다. 유사한 넓은 분류가 있다는 이유로 원문에 해당 조건이 있었다고 표시하지 않았습니다.", "",
+        "", "흡입구 먼지 과다, 외장 찌그러짐, 외장 잔금·균열은 팀 시나리오에서 추가한 용어입니다. 유사한 넓은 분류가 있다는 이유로 원문에 해당 조건이 있었다고 표시하지 않았습니다.", "",
         "## 표준 값", "", "| 범위 | 코드 | 표준 값 | 자연어 예시 | 근거 사례 ID |", "|---|---|---|---|---|"]
     for e in entries:
         ids = ", ".join(r["source_id"] for r in e["supporting_records"]) or "팀 요구 추가"

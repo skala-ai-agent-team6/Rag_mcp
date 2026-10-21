@@ -6,8 +6,8 @@ from fastmcp import FastMCP
 from pydantic import Field
 
 from .config import read_json
-from .labels import DAMAGE_PARTS, interpret_damage_labels, interpret_pcb_labels
-from .models import DamageLabel, SearchRequest
+from .labels import SURFACE_DEFECTS, interpret_damage_labels, interpret_pcb_labels
+from .models import SearchRequest
 from .normalize import normalize_observations
 
 READ_ONLY = {"readOnlyHint": True, "destructiveHint": False, "idempotentHint": True,
@@ -49,14 +49,16 @@ def create_server(service: str, store=None) -> FastMCP:
             return interpret_pcb_labels(labels)
     elif service == "damage":
         @mcp.tool(annotations=READ_ONLY)
-        def interpret_damage(labels: Annotated[list[DamageLabel], Field(max_length=30)]) -> dict:
-            """현재 지원하는 dent 6종 해석. 제외된 유형·라벨은 미등록으로 보존. 청소기 부위 대응은 대기 중."""
+        def interpret_damage(labels: Annotated[list[Annotated[str, Field(min_length=1, max_length=100)]],
+                                              Field(max_length=30)]) -> dict:
+            """외형 표면 결함 6종을 해석. 좌표·부위·심각도는 추정하지 않음."""
             return interpret_damage_labels(labels)
 
         @mcp.tool(annotations=READ_ONLY)
         def list_damage_labels() -> dict:
-            """damage_type에 따라 유효한 부위 목록."""
-            return DAMAGE_PARTS
+            """지원하는 표면 결함 라벨과 한국어 이름."""
+            return {label: {"name_ko": name, "description_ko": description}
+                    for label, (name, description) in SURFACE_DEFECTS.items()}
     elif service == "rag":
         def get_store():
             with init_lock:
@@ -68,8 +70,8 @@ def create_server(service: str, store=None) -> FastMCP:
         @mcp.tool(annotations=AI_READ_ONLY)
         def retrieve_repair_context(request: SearchRequest) -> dict:
             """소견+PCB+외형 라벨로 사례·기술 문서 검색 및 정확한 라벨의 점검 지침 조회.
-            근거별 출처, 종합 요약, 추가 질문, 조건부 점검 제안을 반환. 내부에서 OpenAI 소견 변환 호출.
-            외형 지침은 청소기 대응 대기 상태. 확정 진단/DB 저장/승인은 수행하지 않음.
+            근거별 출처, 증상 판정, 점검 순서를 반환. 내부에서 OpenAI 소견 변환 호출.
+            외형 지침은 위치를 지정하지 않는 표면 점검 팀 초안. 확정 진단/DB 저장/승인은 수행하지 않음.
             """
             from .retrieval import retrieve_context
             return retrieve_context(request, get_store())

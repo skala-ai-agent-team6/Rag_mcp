@@ -37,6 +37,7 @@ ENGLISH_HINTS = {
     "CORROSION_VISIBLE": "visible corrosion",
     "HOUSING_BROKEN": "broken housing",
     "HOUSING_DENT": "dented housing",
+    "HOUSING_CRACK": "cracked housing surface",
     "HOSE_BROKEN": "broken hose",
     "CORD_REWIND_FAILURE": "power cord does not rewind",
     "DUSTBIN_OPEN_FAILURE": "dust bin does not open",

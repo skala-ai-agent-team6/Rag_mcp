@@ -54,8 +54,9 @@ async def main():
                 print(f"{service}: HTTP MCP OK", flush=True)
         assert results["observation"]["raw_text"] == results["rag"]["observation"]["raw_text"]
         assert results["rag"]["repair_cases"]
-        assert len(results["rag"]["label_definitions"]) == 3
-        assert results["rag"]["damage"]["domain_mismatch"]
+        assert len(results["rag"]["label_definitions"]) == 2
+        assert results["rag"]["damage"]["detections"][0]["label"] == "crazing"
+        assert results["rag"]["damage"]["detections"][0]["location"] is None
         (runtime / "http-result.json").write_text(json.dumps(results, ensure_ascii=False, indent=2))
         print("All four HTTP MCP services verified; results: .runtime/http-result.json")
     finally:

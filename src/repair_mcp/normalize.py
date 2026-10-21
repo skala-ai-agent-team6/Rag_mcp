@@ -24,7 +24,7 @@ class Observation(BaseModel):
 
 class Extraction(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    observations: list[Observation] = Field(max_length=42)
+    observations: list[Observation] = Field(max_length=43)
     unmapped_fragments: list[str] = Field(max_length=100)
 
 
@@ -41,6 +41,8 @@ SYSTEM_PROMPT = """당신은 가전 수리 기사의 한국어 소견을 검색�
 '같다/의심/보인다'는 suspected다. reported는 발화자의 보고이지 고장 원인 확정이 아니다.
 evidence_text는 사용자 원문에서 그대로 복사한 연속된 부분 문자열이어야 한다.
 원문에 없는 위치/부품을 보충하지 않는다. '먼지가 많아요'에 흡입구라는 위치를 추가하지 않는다.
+'외장 표면에 가는 금/잔금이 보여요'는 HOUSING_CRACK이며 HOUSING_DENT(눌림·찌그러짐)가 아니다.
+금이 갔다는 진술만으로 관통·내부 노출·기능 이상을 추가하지 않는다.
 목록으로 표현할 수 없는 관찰, 맥락 부족, 무관한 문장은 원문 일부를 unmapped_fragments에 그대로 남긴다.
 맞는 코드가 없으면 observations는 빈 배열이다. 텍스트에 맞춰 분류하며 목록에 맞춰 사실을 만들지 않는다.
 표준 용어 목록:\n""" + json.dumps([
