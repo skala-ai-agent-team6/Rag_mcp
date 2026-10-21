@@ -44,34 +44,23 @@ def retrieve_guidance(pcb, damage):
 
 
 def symptom_conclusion(observation, pcb, damage):
-    """Decide which symptoms are reported and which defects the models labelled."""
+    """Summarize the technician's reported symptoms in one short line."""
     present = list(dict.fromkeys(item["label_ko"] for item in observation.get("observations", [])
                                  if item["polarity"] == "present"))
     absent = list(dict.fromkeys(item["label_ko"] for item in observation.get("observations", [])
                                 if item["polarity"] == "absent"))
-    pcb_labels = [item["label"] for item in pcb["detections"]]
-    damage_labels = [item["label"] for item in damage["detections"]]
     parts = []
     if present:
-        parts.append("기사 소견상 " + ", ".join(present))
-    elif observation.get("raw_text", "").strip():
-        parts.append("기사 소견: " + observation["raw_text"].strip())
-    if pcb_labels:
-        parts.append("PCB 모델 검출: " + ", ".join(pcb_labels))
-    if damage_labels:
-        parts.append("외형 모델 검출: " + ", ".join(damage_labels))
+        parts.append(", ".join(present))
+    elif not absent and observation.get("raw_text", "").strip():
+        parts.append(observation["raw_text"].strip())
     if absent:
-        parts.append("기사 소견에서 부정된 항목: " + ", ".join(absent))
+        parts.append(", ".join(absent) + "은 보이지 않는다고 보고")
     if not parts:
-        return "입력된 소견이나 결함 라벨이 없어 증상을 판정할 근거가 없습니다."
-    targets = []
-    if pcb_labels:
-        targets.append("PCB 패턴")
-    if damage_labels:
-        targets.append("외형 표면")
-    if targets:
-        parts.append("점검 대상: " + ", ".join(targets))
-    return "입력 기준 증상 판정: " + "; ".join(parts) + "."
+        labels = [f"PCB {item['label']}" for item in pcb["detections"]]
+        labels += [f"외형 {item['label']}" for item in damage["detections"]]
+        return "기사 소견 없음; 모델 라벨: " + ", ".join(labels) if labels else "입력 근거 없음"
+    return "; ".join(parts)
 
 
 def integrate_evidence(cases, references, guidance, observation, pcb, damage):

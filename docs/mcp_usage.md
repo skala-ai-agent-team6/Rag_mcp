@@ -11,7 +11,7 @@
 | observation-mcp | normalize_observation | 한국어 기사 소견, 작성 주체, 기사 확인 여부 | OpenAI가 선택한 표준 소견 후보, 원문, 부정/추정, 미등록 구절 |
 | pcb-mcp | interpret_pcb | PCB 라벨 문자열 배열 | 6종 표준 라벨, 설명, 미등록 라벨 |
 | damage-mcp | interpret_damage | 표면 결함 라벨 문자열 배열 | 6종 결함 이름·설명, 미등록 라벨. 위치·좌표 해석 없음 |
-| rag-mcp | retrieve_repair_context | 원문 소견 + PCB 라벨 + 외형 라벨 | 과거 사례, 입력 기준 증상 판정, PCB·외형 점검 지침, 참고 문서 |
+| rag-mcp | retrieve_repair_context | 원문 소견 + PCB 라벨 + 외형 라벨 | 과거 사례, 짧은 증상 요약, 라벨별 한 줄 점검 안내, LLM 최종 소견 |
 | rag-mcp | search_reference_documents | 검색어, 문서 컬렉션 | PCB 또는 외형 정의 문서 dense 검색 |
 
 보조 목록 도구: `list_observation_terms`, `list_damage_labels`.
@@ -58,8 +58,8 @@ uv run python experiments/run.py
 - 첫 색인 때 Hugging Face에서 `intfloat/multilingual-e5-small`을 다운로드한다.
 - 기본 Qdrant는 `.runtime/qdrant`, 모델 캐시는 `.runtime/models`에 저장한다. 모두 Git 제외.
 - `index`와 로컬 RAG 서버를 동시에 실행하면 안 된다. 로컬 Qdrant 폴더는 한 프로세스가 사용한다.
-- `examples/call_mcp.py`는 네 서버에 실제 MCP 프로토콜로 호출하는 예시다. 기본은 같은 프로세스의 in-memory transport다.
-- 기본 출력은 소견 키워드·모델 라벨·사례 원문 발췌·참고문서 제목이다. `--json`을 붙이면 중간 응답과 전체 문서·출처를 포함한 JSON을 출력한다. 출력 형식만 바꾸며 검색 순위나 관련성 판단은 변경하지 않는다.
+- `examples/call_mcp.py`는 RAG MCP를 실제 프로토콜로 한 번 호출한다. 기본은 같은 프로세스의 in-memory transport다. `--http`는 실행 중인 RAG MCP(8014)에 연결한다.
+- 기본 출력은 최종 소견 한 줄, 점검 안내, 증상 판정, 유사 사례 최대 3건의 ID와 한 줄 내용이다. `--json`을 붙이면 전체 사례·출처·라벨 해석·중간 응답을 출력한다.
 - 다운로드 완료 후 `HF_HUB_OFFLINE=1` 환경변수를 설정하면 모델을 오프라인으로 로드한다.
 
 ## HTTP 서버 실행
@@ -105,6 +105,7 @@ LangGraph 쪽에서는 이 주소들을 MCP Client에 등록한다. Docker 안�
 - 이전 부위 라벨 `boot`, `roof` 등은 지원 범위에서 제외하고 미등록 라벨로 반환한다.
 - 좌표가 함께 오더라도 현재 입력에는 라벨 이름만 전달한다. MCP는 좌표를 저장·해석하거나 위치를 추정하지 않는다.
 - 라벨 목록이 비었다고 정상 판정하지 않는다. 미등록 라벨은 버리지 않고 별도 반환한다.
+- 모델이 3회 재시도 후 결과를 보내지 못하면 해당 `pcb_labels` 또는 `damage_labels`를 `null`로 전달하거나 생략한다. `[]`는 모델이 응답했지만 검출 라벨이 없는 경우다. RAG는 다른 입력으로 계속 검색하고 `input_state`에 차이를 보존한다. 재시도 횟수와 타임아웃 처리는 모델 호출 측에서 담당한다.
 - 모델 점수와 좌표는 이 MCP 입력에 전달하지 않는다. 처리하지 않은 값이나 확정 원인을 새로 생성하지 않는다.
 - 기본적으로 인식된 표준 소견에 영문 용어를 붙여 다국어 검색을 돕는다. 부정과 추정 표시를 유지한다. `use_bilingual_hints=false`로 비교 실험할 수 있다.
 
@@ -127,15 +128,16 @@ LangGraph 쪽에서는 이 주소들을 MCP Client에 등록한다. Docker 안�
 
 - `observation`, `pcb`, `damage`: 입력별 해석과 출처.
 - `repair_cases`: 출처 ID·URL·원문·기존 수리 상태·검색 점수를 가진 외부 사례.
+- `case_briefs`: 화면용 상위 3건의 사례 ID와 한 줄 내용. 전체 근거는 `repair_cases`에 남는다.
 - `label_definitions`: 정확한 라벨 ID로 찾은 정의. 유사 사례나 제조사 수리 지침이 아님.
 - `pcb_references`: 별도로 검색된 기술 참고문서. 대상 제품이 다를 수 있음.
 - `pcb_guidance`: 정확한 PCB 라벨로 조회한 팀 점검 지침. 의미·확인 순서·조건부 조치 포함. 원본 초안의 추가 질문은 응답에서 제외.
 - `damage_guidance`: 정확한 표면 결함 라벨로 조회한 일반 점검 지침 초안. `generic_surface_inspection_draft`, `usable_for_vacuum_inspection=true`로 표시하되 실제 부위·재질 확인과 담당자 승인이 필요하다.
 - `guidance_policy`: 승인·적용 제한에 대한 공통 정책.
-- `integrated_assessment`: 입력 기준 증상 판정, 근거 건수 요약, 라벨별 해석, 사례/문서 ID, 점검 순서. 판정은 기사 소견과 모델 라벨의 조합이며 고장 원인 확정이 아니다.
+- `integrated_assessment`: 짧은 증상 요약, 사례/문서 ID, 라벨별 점검 순서, OpenAI가 작성한 최종 소견. 예시 출력은 라벨마다 첫 점검 단계 한 줄만 보여준다. 전체 순서는 JSON에서 확인할 수 있다. 최종 소견은 증상·모델 라벨·점검 지침·유사 사례를 근거로 하며 고장 원인을 확정하지 않는다.
 - `missing_guidance`: 인식됐지만 지침이 없는 라벨. 내용을 추측해서 채우지 않는다.
 
-라벨별 지침은 `data/label_guidance/guidance.jsonl`을 정확한 키로 조회한다. 임베딩 점수로 다른 라벨의 지침을 대체하지 않는다. 유사 사례가 없어도 입력 라벨의 지침은 반환한다. 현재 응답은 증상을 판정하고 점검 순서를 제시하며, 심각도 등급이나 추가 질문은 제공하지 않는다. 지침만 수정했으면 벡터 재색인은 필요 없다.
+라벨별 지침은 `data/label_guidance/guidance.jsonl`을 정확한 키로 조회한다. 임베딩 점수로 다른 라벨의 지침을 대체하지 않는다. 유사 사례가 없어도 입력 라벨의 지침은 반환한다. 현재 응답은 짧은 증상 요약과 점검 안내를 제공하며, 심각도 등급이나 추가 질문은 제공하지 않는다. 지침만 수정했으면 벡터 재색인은 필요 없다.
 
 외형 정의를 표면 결함 6종으로 변경했으므로 이전 벡터 색인은 `repair-mcp index`로 갱신해야 한다. 실행 중인 서버는 중지 후 색인하고 재시작한다.
 - `case_search_status=no_candidates`: 검색 후보 없음. 정상 제품 판정이 아님.
@@ -157,8 +159,9 @@ LangGraph는 출처별 증거를 비교하고 추가 점검 필요성을 설명�
 
 | 환경변수 | 기본/용도 |
 |---|---|
-| OPENAI_API_KEY | 소견 변환용 키 |
+| OPENAI_API_KEY | 소견 변환·최종 소견 작성용 키 |
 | OPENAI_OBSERVATION_MODEL | gpt-4.1-mini; Responses 구조화 출력 지원 모델 |
+| OPENAI_OPINION_MODEL | 기본적으로 OPENAI_OBSERVATION_MODEL 사용; 최종 소견용 모델 |
 | REPAIR_DATA_DIR | 프로젝트 data 경로 |
 | REPAIR_RUNTIME_DIR | 프로젝트 .runtime 경로 |
 | REPAIR_EMBED_MODEL | intfloat/multilingual-e5-small |
@@ -179,7 +182,7 @@ Dense 검색의 기본 0.75 임계값은 임시값이다. E5의 점수는 0.7~1.
 
 OpenAI 전환 후 검증: SDK HTTP 응답을 모의하여 요청 스키마·출처 보존·에러 처리·CLI·MCP 연결을 확인한다. 실제 OpenAI 호출은 키 등록 후 확인해야 한다. 이전 규칙 버전에서는 네 서버의 HTTP 호출과 실검색을 확인했다. `experiments/check_http.py`는 키 등록 후 재검증할 수 있으며 검증 후 임시 서버를 종료한다.
 
-소견 MCP와 RAG를 각각 호출하면 OpenAI 변환도 두 번 실행된다. 두 응답은 같다고 보장하지 않는다. 검색만 필요하면 `retrieve_repair_context` 한 번으로 처리한다. 사용자 소견은 API에 전달하며 원본 사례 전체나 API 키를 프롬프트에 넣지 않는다.
+소견 MCP와 RAG를 각각 호출하면 소견 변환도 두 번 실행된다. RAG는 검색 뒤 최종 소견 작성을 위해 OpenAI를 한 번 더 호출한다. 두 소견 변환 결과는 같다고 보장하지 않는다. 검색과 소견만 필요하면 `retrieve_repair_context` 한 번으로 처리한다. 최종 소견 API에는 긍정적으로 보고된 표준 증상과 모델 라벨·점검 지침, 적용 가능한 상위 사례의 짧은 발췌문만 전달한다. 부정된 증상과 같은 고장 유형의 사례는 최종 소견 입력에서 제외하고, 고장 유형을 안전하게 대조할 수 없으면 사례를 전달하지 않는다. 사례 전체나 API 키는 프롬프트에 넣지 않는다. 최종 소견 실패 시 규칙 문장으로 대체하지 않고 오류를 반환한다.
 
 ## API 키를 넣었는데 인증 실패가 나는 경우
 

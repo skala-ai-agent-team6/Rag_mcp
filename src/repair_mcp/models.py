@@ -10,8 +10,10 @@ class SearchRequest(StrictModel):
     raw_text: str = Field(default="", max_length=2000)
     origin: Literal["technician", "ai_image"] = "technician"
     technician_confirmed: bool = False
-    pcb_labels: list[Annotated[str, Field(min_length=1, max_length=100)]] = Field(default_factory=list, max_length=30)
-    damage_labels: list[Annotated[str, Field(min_length=1, max_length=100)]] = Field(default_factory=list, max_length=30)
+    # None means the upstream model result was not delivered; [] means it
+    # completed without a supported detection. Both allow partial retrieval.
+    pcb_labels: list[Annotated[str, Field(min_length=1, max_length=100)]] | None = Field(default=None, max_length=30)
+    damage_labels: list[Annotated[str, Field(min_length=1, max_length=100)]] | None = Field(default=None, max_length=30)
     model_code: str | None = Field(default=None, max_length=120)
     top_k: int = Field(default=5, ge=1, le=20)
     # Relevance cutoff is experimental, NOT diagnosis confidence.

@@ -70,7 +70,7 @@ def create_server(service: str, store=None) -> FastMCP:
         @mcp.tool(annotations=AI_READ_ONLY)
         def retrieve_repair_context(request: SearchRequest) -> dict:
             """소견+PCB+외형 라벨로 사례·기술 문서 검색 및 정확한 라벨의 점검 지침 조회.
-            근거별 출처, 증상 판정, 점검 순서를 반환. 내부에서 OpenAI 소견 변환 호출.
+            근거별 출처, 짧은 증상 요약, 점검 순서, OpenAI 최종 소견을 반환.
             외형 지침은 위치를 지정하지 않는 표면 점검 팀 초안. 확정 진단/DB 저장/승인은 수행하지 않음.
             """
             from .retrieval import retrieve_context

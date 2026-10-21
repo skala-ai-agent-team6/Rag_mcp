@@ -61,7 +61,7 @@ PCB 기술 문서는 분류 용어 참고 1개와 Repair Wiki 기술 가이드 �
 - `observation-mcp`: OpenAI가 기사 한 줄 소견의 문맥을 읽어 43개 표준 소견 중 후보 선택. 원문·부정·추정·미등록 구절 보존.
 - `pcb-mcp`: 팀 모델의 6개 결함 라벨과 별칭 해석. 이미지 추론은 하지 않음.
 - `damage-mcp`: `crazing`, `inclusion`, `patches`, `pitted_surface`, `rolled-in_scale`, `scratches`의 표면 결함 라벨을 해석. 위치·재질·심각도는 추정하지 않음.
-- `rag-mcp`: 원문 소견 + PCB + 적용 가능한 외형 라벨로 다국어 dense 검색. 사례·PCB 참고·라벨 정의를 분리 반환.
+- `rag-mcp`: 원문 소견 + PCB + 적용 가능한 외형 라벨로 다국어 dense 검색. 사례·PCB 참고·라벨 정의를 분리 반환하고, OpenAI로 짧은 최종 소견을 작성.
 - 2,711개 사례 / PCB 문서 9개 / 외형 라벨 문서 6개를 별도 Qdrant 컬렉션에 색인.
 - `tests/`: 정규화·출처·부정·라벨 검증·MCP 프로토콜·색인 계약 테스트.
 - `experiments/`: 실제 임베딩을 사용한 소견 단독/결합 검색 실험. 기존 results는 규칙 기반 버전의 기록이다. OpenAI 전환 후 실행은 results/openai에 별도 저장하며 아직 실측하지 않았다.
